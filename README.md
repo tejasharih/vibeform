@@ -1,54 +1,54 @@
-# VibeForm 🎨
+# VibeForm
 
-A modern web application for creating and sharing beautiful forms with a responsive interface.
-
-## Features
-
-- 🎨 Modern UI with Tailwind CSS
-- ⚡ Fast and responsive design
-- 📝 Form creation and sharing
-- 📱 Mobile-friendly interface
-- 🚀 Built with React and Vite
+VibeForm turns one mood into a complete multi-sensory experience:
+- Spotify playlist recommendation
+- Mood-matched recipe
+- Movie recommendation
+- Color palette
+- Short meditation script
+- Outfit direction
+- Creative writing prompt
 
 ## Tech Stack
 
-- React
-- Vite
-- Tailwind CSS
-- Node.js
-- Express.js
+- Frontend: React + Vite
+- Backend: Node.js + Express
+- APIs: Groq + Spotify
 
-## Getting Started
+## Quick Start
 
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/tejasharih/vibeform.git
-cd vibeform
-```
-
-2. Install dependencies
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Start the development server
+2. Create `.env` in the project root:
+```env
+PORT=3001
+GROQ_KEY=your_groq_key
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+```
+
+3. Start backend:
+```bash
+npm run server
+```
+
+4. Start frontend (new terminal):
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
+5. Open `http://localhost:5174`
 
-## Contributing
+## API Endpoints
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- `GET /api/health`
+- `GET /api/playlist?mood=focused`
+- `GET /api/experience?mood=calm&ingredients=["tomato","basil"]&longMode=true`
 
-## License
+## Notes
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+- Vite proxy forwards `/api` to `http://localhost:3001`.
+- App stores recent generation history in `localStorage`.
